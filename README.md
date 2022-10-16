@@ -2,7 +2,11 @@
 The official code for [ACM MM 2022] 'In-N-Out Generative Learning for Dense Unsupervised Video Segmentation'.
 [[arXiv]](https://arxiv.org/abs/2203.15312)
 
+We achieve a new state-of-the-art performance for unsupervised learning methods on VOS task, based on ViT and the idea of generative learning. 
 
+
+![image](https://user-images.githubusercontent.com/47111102/196040697-ca426c98-d3a4-4499-a9c7-54173a575fa9.png)
+![image](https://user-images.githubusercontent.com/47111102/196040701-ea9e09f3-319e-4504-ab2a-5060a82edfee.png)
 
 
 
