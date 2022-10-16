@@ -20,7 +20,7 @@ The codebase is implemented based on [DINO](https://github.com/facebookresearch/
 
 # Dataset Preparation
 
-## Training Datasets
+### Training Datasets
 We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for trianing.
 
 After downloading datasets, run:
@@ -31,20 +31,22 @@ ln -s /your/path/Charades_v1_480 ./data
 ln -s /your/path/Kinetics_400 ./data
 ```
 
-## Evaluation Datasets
+### Evaluation Datasets
 We benchmark on DAVIS-2017 val and YouTube-VOS 2018 val.
 
-Download DAVIS-2017 via:
- ```shell 
+Download DAVIS-2017 from [here](https://github.com/davisvideochallenge/davis-2017/blob/master/data/get_davis.sh).
+<!--  ```shell 
  cd $DAVIS_SAVE_DIR
  git clone https://github.com/davisvideochallenge/davis-2017 && cd davis-2017
  ./data/get_davis.sh
  cd $HOME
  ln -s $DAVIS_SAVE_DIR/davis-2017/DAVIS ./data
- ```
+ ``` -->
+
 
 Download YouTube-VOS 2018 (valid_all_frames.zip and valid.zip) from [here](https://competitions.codalab.org/competitions/19544#participate-get-data).
-Unzip them and link to ```./data``` (similar as previous datasets).
+
+Link them to ```./data``` (similar as previous datasets).
 
  
 The final structure of ```data``` folder should be:
@@ -80,10 +82,10 @@ Same for training on Kinetics-400.
 
 # Evaluation 
 
-## Inference
+### Inference
 
 
-## Evaluation: DAVIS-2017
+### Evaluation: DAVIS-2017
 
  
  Then, install the official evaluation code and evaluat the inference results:
@@ -96,7 +98,10 @@ python $HOME/davis2017-evaluation/evaluation_method.py --task semi-supervised --
  
  
  
-YouTube-VOS 2018:
+### Evaluation: YouTube-VOS 2018
+
+Please use the official [CodaLab evaluation server](https://competitions.codalab.org/competitions/19544#participate-submit_results).
+To create the submission, rename the `vos`-directory to `Annotations` and compress it to `Annotations.zip` for uploading.
  
 
 
