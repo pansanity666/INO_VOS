@@ -19,17 +19,35 @@ The codebase is implemented based on [DINO](https://github.com/facebookresearch/
 # Data Preparation
 We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for trianing. We benchmark on DAVIS-2017 val and YouTube-VOS 2018 val.
 
-A csv file is required for each training dataset. Please see ```./dataset/charades_mp4_mnt4.csv``` for an example (you can simply replace the dataset path in the csv file with your own path). 
+After downloading datasets, run:
+```shell
+mkdir ./data
+ln -s your/path/Charades_v1_480 ./data
+ln -s your/path/Kinetics_400 ./data
+```
+
+The structure of ```data``` folder should be:
+```shell
+-data
+  -Charades_v1_480
+    - xxxx.mp4
+    - ...
+  -Kinetics_400
+    - xxxx.mp4
+    - ...
+```
 
 # Training
 
-Set the ```ckpt_output_path```, ```csv_path```, ```dataset_cache_path``` in ```train_charades.sh``` and then run 
+Set the ```ckpt_output_path```, ```dataset_cache_path``` in ```train_charades.sh``` as you need and then run 
 
 ```shell
   sh  train_charades.sh
 ```
 
-Similar for Kinetics.
+The dataset meta will be cached under ```dataset_cache_path``` at the first run (it may take few minutes.).
+
+Same for training on Kinetics-400.
 
 # Evaluation 
 
