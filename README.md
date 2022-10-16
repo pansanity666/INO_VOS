@@ -1,5 +1,5 @@
 # INO_VOS
-The official code for [ACM MM 2022] 'In-N-Out Generative Learning for Dense Unsupervised Video Segmentation'.
+The official code for **[ACM MM 2022] 'In-N-Out Generative Learning for Dense Unsupervised Video Segmentation'**.
 [[arXiv]](https://arxiv.org/abs/2203.15312)
 
 We achieve a new state-of-the-art performance for unsupervised learning methods on VOS task, based on ViT and the idea of generative learning. 
