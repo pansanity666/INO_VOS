@@ -88,7 +88,7 @@ Same for training on Kinetics-400.
 ### Evaluation: DAVIS-2017
 
  
- Then, install the official evaluation code and evaluat the inference results:
+ Please install the official evaluation code and evaluat the inference results:
  ```shell
 cd $HOME
 git clone https://github.com/davisvideochallenge/davis2017-evaluation $HOME/davis2017-evaluation
