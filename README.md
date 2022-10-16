@@ -43,11 +43,11 @@ Download DAVIS-2017 via:
  ln -s $DAVIS_SAVE_DIR/davis-2017/DAVIS ./data
  ```
 
+Download YouTube-VOS 2018 (valid_all_frames.zip and valid.zip) from [here](https://competitions.codalab.org/competitions/19544#participate-get-data).
+Unzip them and link to ```./data``` (similar as previous datasets).
 
-Download YouTube-VOS 2018 from [here](https://competitions.codalab.org/competitions/19544#participate-get-data).
  
- 
-The structure of ```data``` folder should be:
+The final structure of ```data``` folder should be:
 ```shell
 -data
   -Charades_v1_480
@@ -56,11 +56,12 @@ The structure of ```data``` folder should be:
   -Kinetics_400
     - xxxx.mp4
     - ...
-    
   -DAVIS
     - Annotations
     - ...
-  -
+  -YouTube_VOS
+    - valid_all_frames
+    - valid
 ```
 
 # Training
