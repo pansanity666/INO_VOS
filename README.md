@@ -4,10 +4,8 @@ The official code for [ACM MM 2022] 'In-N-Out Generative Learning for Dense Unsu
 
 We achieve a new state-of-the-art performance for unsupervised learning methods on VOS task, based on ViT and the idea of generative learning. 
 
-
 ![image](https://user-images.githubusercontent.com/47111102/196040697-ca426c98-d3a4-4499-a9c7-54173a575fa9.png)
 ![image](https://user-images.githubusercontent.com/47111102/196040701-ea9e09f3-319e-4504-ab2a-5060a82edfee.png)
-
 
 
 # Environment
@@ -20,16 +18,35 @@ We train on Charades with 4x16GB V100 and Kinetics-400 with 8x16GB V100. The tra
 The codebase is implemented based on [DINO](https://github.com/facebookresearch/dino), [DUL](https://github.com/visinf/dense-ulearn-vos), and [VRW](https://github.com/ajabri/videowalk). 
 
 
-# Data Preparation
-We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for trianing. We benchmark on DAVIS-2017 val and YouTube-VOS 2018 val.
+# Dataset Preparation
+
+## Training Datasets
+We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for trianing.
 
 After downloading datasets, run:
 ```shell
+cd $HOME
 mkdir ./data
-ln -s your/path/Charades_v1_480 ./data
-ln -s your/path/Kinetics_400 ./data
+ln -s /your/path/Charades_v1_480 ./data
+ln -s /your/path/Kinetics_400 ./data
 ```
 
+## Evaluation Datasets
+We benchmark on DAVIS-2017 val and YouTube-VOS 2018 val.
+
+Download DAVIS-2017 via:
+ ```shell 
+ cd $DAVIS_SAVE_DIR
+ git clone https://github.com/davisvideochallenge/davis-2017 && cd davis-2017
+ ./data/get_davis.sh
+ cd $HOME
+ ln -s $DAVIS_SAVE_DIR/davis-2017/DAVIS ./data
+ ```
+
+
+Download YouTube-VOS 2018 from [here](https://competitions.codalab.org/competitions/19544#participate-get-data).
+ 
+ 
 The structure of ```data``` folder should be:
 ```shell
 -data
@@ -39,6 +56,11 @@ The structure of ```data``` folder should be:
   -Kinetics_400
     - xxxx.mp4
     - ...
+    
+  -DAVIS
+    - Annotations
+    - ...
+  -
 ```
 
 # Training
@@ -46,7 +68,8 @@ The structure of ```data``` folder should be:
 Set the ```ckpt_output_path```, ```dataset_cache_path``` in ```train_charades.sh``` as you need and then run 
 
 ```shell
-  sh  train_charades.sh
+cd $HOME
+sh  train_charades.sh
 ```
 
 The dataset meta will be cached under ```dataset_cache_path``` at the first run (it may take few minutes.).
@@ -54,6 +77,25 @@ The dataset meta will be cached under ```dataset_cache_path``` at the first run 
 Same for training on Kinetics-400.
 
 # Evaluation 
+
+## Inference
+
+
+## Evaluation: DAVIS-2017
+
+ 
+ Then, install the official evaluation code and evaluat the inference results:
+ ```shell
+cd $HOME
+git clone https://github.com/davisvideochallenge/davis2017-evaluation $HOME/davis2017-evaluation
+python $HOME/davis2017-evaluation/evaluation_method.py --task semi-supervised --results_path $INFERENCE_OUTPUT --davis_path $DAVIS_SAVE_DIR/davis-2017/DAVIS/ --results_path $EVAL_RESULT_SAVE_DIR
+ ```
+ 
+ 
+ 
+ 
+YouTube-VOS 2018:
+ 
 
 
 
