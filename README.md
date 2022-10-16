@@ -58,6 +58,7 @@ The final structure of ```data``` folder should be:
     - ...
   -DAVIS
     - Annotations
+    - JPEGImages
     - ...
   -YouTube_VOS
     - valid_all_frames
