@@ -1,4 +1,4 @@
-# modify these two parameters as you need.
+# modify this as you need.
 ckpt_output_path='/mnt4/panxiao.pan/remote83_mnt3/workspace/result/sscl_dataloader_updated_final' # path for saving ckpt and training logs.
 
 # 
