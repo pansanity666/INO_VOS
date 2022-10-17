@@ -1,0 +1,28 @@
+*.pth
+*.jpg
+*.png
+*.tar.gz
+*.mp4
+./data/*
+./cached/*
+
+# Editors
+.vscode/
+.idea/
+
+# Vagrant
+.vagrant/
+
+# Mac/OSX
+.DS_Store
+
+# Windows
+Thumbs.db
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.swp
+*.pt
+
