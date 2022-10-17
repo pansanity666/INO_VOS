@@ -86,15 +86,19 @@ Same for training on Kinetics-400.
 Our checkpoint used in the paper can be downloaded from [here](https://drive.google.com/drive/folders/1gf5XZ8Y9OPhXcsgzlI3Cp3h3dGQOm8My?usp=sharing).
 
 For the sake of efficiency, we first pre-generate the mask used during label propagation and cache them on disk. 
+
 ```shell
 python ./scripts/pre_calc_maskNeighborhood.py [davis|ytvos] 
 ```
+
 It may take few minutes, and the results will be cached under ```./cached_masks``` by default. 
 
 Then, run label propagation via:
+
 ```shell
 sh infer_vos.sh [davis|ytvos] $CKPT_PATH 
 ```
+
 Two folders will be created under ```./results```, where ```vos``` is the masks while ```vis``` is the blended visualization results. 
 
 ### Evaluation: DAVIS-2017
