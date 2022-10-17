@@ -25,7 +25,8 @@ We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetic
 
 After downloading datasets, run:
 ```shell
-cd $HOME
+git clone git@github.com:pansanity666/INO_VOS.git
+cd INO_VOS
 mkdir ./data
 ln -s /your/path/Charades_v1_480 ./data
 ln -s /your/path/Kinetics_400 ./data
@@ -106,9 +107,9 @@ Two folders will be created under ```./results```, where ```vos``` is the masks 
  
  Please install the official evaluation code and evaluat the inference results:
  ```shell
-cd $HOME
-git clone https://github.com/davisvideochallenge/davis2017-evaluation $HOME/davis2017-evaluation
-python $HOME/davis2017-evaluation/evaluation_method.py --task semi-supervised --results_path $INFERENCE_OUTPUT --davis_path $DAVIS_SAVE_DIR/davis-2017/DAVIS/ 
+# under INO_VOS dir
+git clone https://github.com/davisvideochallenge/davis2017-evaluation ./davis2017-evaluation
+python ./davis2017-evaluation/evaluation_method.py --task semi-supervised --results_path $OUTPUT_VOS --davis_path ./data/DAVIS/ 
  ```
  
  
