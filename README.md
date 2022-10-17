@@ -70,10 +70,10 @@ The final structure of ```data``` folder should be:
 
 # Training
 
-Set the ```ckpt_output_path```, ```dataset_cache_path``` in ```train_charades.sh``` as you need and then run 
+Set the ```ckpt_output_path``` in ```train_charades.sh``` as you need and then run 
 
 ```shell
-cd $HOME
+# under INO_VOS dir
 sh  train_charades.sh
 ```
 
@@ -86,13 +86,13 @@ Same for training on Kinetics-400.
 ### Inference
 Our checkpoint used in the paper can be downloaded from [here](https://drive.google.com/drive/folders/1gf5XZ8Y9OPhXcsgzlI3Cp3h3dGQOm8My?usp=sharing).
 
-For the sake of efficiency, we first pre-generate the mask used during label propagation and cache them on disk. 
+For the sake of efficiency, we first pre-generate the neighbor masks used during label propagation and cache them on disk. 
 
 ```shell
 python ./scripts/pre_calc_maskNeighborhood.py [davis|ytvos] 
 ```
 
-It may take few minutes, and the results will be cached under ```./cached_masks``` by default. 
+It may take few minutes, and the neighbor masks will be cached under ```./cached/masks``` by default. 
 
 Then, run label propagation via:
 
@@ -100,7 +100,7 @@ Then, run label propagation via:
 sh infer_vos.sh [davis|ytvos] $CKPT_PATH 
 ```
 
-Two folders will be created under ```./results```, where ```vos``` is the masks while ```vis``` is the blended visualization results. 
+Two folders will be created under ```./results```, where ```vos``` is the segmentation masks while ```vis``` is the blended visualization results. 
 
 ### Evaluation: DAVIS-2017
 
