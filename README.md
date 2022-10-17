@@ -92,7 +92,7 @@ Same for training on Kinetics-400.
  ```shell
 cd $HOME
 git clone https://github.com/davisvideochallenge/davis2017-evaluation $HOME/davis2017-evaluation
-python $HOME/davis2017-evaluation/evaluation_method.py --task semi-supervised --results_path $INFERENCE_OUTPUT --davis_path $DAVIS_SAVE_DIR/davis-2017/DAVIS/ --results_path $EVAL_RESULT_SAVE_DIR
+python $HOME/davis2017-evaluation/evaluation_method.py --task semi-supervised --results_path $INFERENCE_OUTPUT --davis_path $DAVIS_SAVE_DIR/davis-2017/DAVIS/ 
  ```
  
  
