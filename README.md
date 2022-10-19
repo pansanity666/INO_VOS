@@ -77,7 +77,7 @@ Set the ```ckpt_output_path``` in ```train_charades.sh``` as you need and then r
 sh  train_charades.sh
 ```
 
-The dataset meta will be cached under ```dataset_cache_path``` at the first run (it may take few minutes.).
+The dataset meta will be cached under ```./cached/charades``` at the first run (it may take few minutes.).
 
 Same for training on Kinetics-400.
 
@@ -105,7 +105,7 @@ Two folders will be created under ```./results```, where ```vos``` is the segmen
 ### Evaluation: DAVIS-2017
 
  
- Please install the official evaluation code and evaluat the inference results:
+ Please install the official evaluation code and evaluate the inference results:
  ```shell
 # under INO_VOS dir
 git clone https://github.com/davisvideochallenge/davis2017-evaluation ./davis2017-evaluation
