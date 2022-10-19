@@ -2,8 +2,8 @@
 ckpt_output_path='/mnt4/panxiao.pan/remote83_mnt3/workspace/result/sscl_dataloader_updated_final' # path for saving ckpt and training logs.
 
 # 
-dataset_cache_path='./cached/charades' # path for caching dataset meta.
-csv_path='./meta/charades_train_list.csv' # path for the csv file of trianing data. 
+dataset_cache_path='./cached/kinetics' # path for caching dataset meta.
+csv_path='./meta/kinetics400_train_list.csv' # path for the csv file of trianing data. 
 
 # ===== Charades from scratch =====
 # 8 cards
