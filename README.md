@@ -4,6 +4,7 @@ The official code for **[ACM MM 2022] 'In-N-Out Generative Learning for Dense Un
 
 We achieve a new state-of-the-art performance for unsupervised learning methods on VOS task, based on ViT and the idea of generative learning. 
 
+![image](https://user-images.githubusercontent.com/47111102/196872637-17c187f2-a2d3-4468-a23a-75be56bd48bd.png)
 ![image](https://user-images.githubusercontent.com/47111102/196040697-ca426c98-d3a4-4499-a9c7-54173a575fa9.png)
 ![image](https://user-images.githubusercontent.com/47111102/196040701-ea9e09f3-319e-4504-ab2a-5060a82edfee.png)
 
