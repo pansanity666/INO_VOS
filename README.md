@@ -22,7 +22,7 @@ The codebase is implemented based on [DINO](https://github.com/facebookresearch/
 # Dataset Preparation
 
 ### Training Datasets
-We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for trianing.
+We use [charades_480p](https://prior.allenai.org/projects/charades) and [Kinetics-400](https://github.com/cvdfoundation/kinetics-dataset) for training.
 
 After downloading datasets, run:
 ```shell
