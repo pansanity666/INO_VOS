@@ -128,10 +128,11 @@ To create the submission, rename the `vos`-directory to `Annotations` and compre
 If you find our work useful, please consider citing:
 
 ```latex
-@article{pan2022n,
-  title={In-N-Out Generative Learning for Dense Unsupervised Video Segmentation},
+@inproceedings{pan2022n,
+  title={In-n-out generative learning for dense unsupervised video segmentation},
   author={Pan, Xiao and Li, Peike and Yang, Zongxin and Zhou, Huiling and Zhou, Chang and Yang, Hongxia and Zhou, Jingren and Yang, Yi},
-  journal={arXiv preprint arXiv:2203.15312},
+  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
+  pages={1819--1827},
   year={2022}
 }
 ```
